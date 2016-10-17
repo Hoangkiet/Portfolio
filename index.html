@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Kiet Vo" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	
+	<link rel="stylesheet" type="text/css" href="new.css" />
+	
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+
+<!-- javascript  fullpage & menu-->
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+			
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				
+		 });
+		});
+
+$(document).ready(function () {
+  var trigger = $('.hamburger'),
+  	  overlay = $('.overlay'),
+      isClosed = false;
+     // dicht = ;
+
+      
+
+    $('.click1').click(function () {
+        $('#wrapper').toggleClass('toggled');
+
+    trigger.click(function () {
+      hamburger_cross();  
+        });
+        });
+
+function hamburger_cross() {
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } 
+      else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+
+
+
+$('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+
+
+/*$('.click1').click(function () {
+        $('#wrapper').toggleClass('toggled');
+        
+        $('.click1').removeClass('is-closed');
+        $('.click1').addClass('is-open');
+        isClosed = false;
+        //$('.sidebar-nav li a').removeClass('is-closed');
+        //$('.sidebar-nav li a').addClass('is-open');
+        //isClosed = true;
+  });  */
+
+            });  
+});    
+
+</script>
+
+<!--
+<script type="text/javascript">
+$(document).ready(function () {
+$('.click1').click(function () {
+        $('#wrapper').toggleClass('toggled');
+        isClosed = false;
+        //$('.sidebar-nav li a').removeClass('is-closed');
+        //$('.sidebar-nav li a').addClass('is-open');
+        //isClosed = true;
+  });
+</script> -->
+
+</head>
+<body>
+<header class="topbar" style> </header>
+
+		
+<div id="wrapper">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+  <ul class="nav sidebar-nav">
+    <li>
+      <a href="#"><strong><h4>Navigatie</h4></strong></a>
+    </li>
+	  <li> <a class="click1" href="#firstPage"><i class="fa fa-fw fa-home"></i> Home</a> </li>
+      <li> <a class="click1" href="#secondPage"><i class="fa fa-fw fa-folder"></i> Over</a> </li>
+      <li> <a class="click1" href="#3rdPage"><i class="fa fa-fw fa-file-o"></i> Werk</a> </li>
+       <li> <a class="click1" href="#"><i class="fa fa-fw fa-file-o"></i> Contact</a> </li>
+  </ul>
+</nav>
+
+ <div id="page-content-wrapper">
+
+
+<div class="container">
+
+<div class="row">
+        <div id="navigatie "class="col-lg-12 text-right">
+              <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas"><span class="hamb-top"></span> <span class="hamb-middle"></span> <span class="hamb-bottom"></span> <span style="margin-left: 36px; font-size: 16px; color:grey;">MENU</span> </button>  
+
+              <span class="logo" style="margin-left: -100px; color: grey;"><h1>LOGO</h1>
+
+              </span>
+
+      
+       </div>    
+  
+
+
+<div id="fullpage">
+	<div class="section" id="section0">
+			<div class="banner"> 
+		<span class="background"></span>
+  			<div class="banner-titel"><h1>Portfolio</h1>
+  		   <div class="ondertitel2">
+            <h2 style="font-size: 45px;">Kiet Vo</h2>
+          <div class="ondertitel">
+            <h2>UX designer <br> Developer</h2>
+
+
+             </div>
+ 		</div>
+	</div>
+</div>
+</div>
+	 
+
+
+
+
+
+	<div class="section" id="section1">
+	    <div class="over-banner"> 
+		<span class="over-background"></span>
+		  		<div class="text-left"> <h5>OVER MIJ</h5> </div>
+  		</div>
+
+
+
+	</div>
+
+
+
+	<div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+	<div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+</div>
+
+
+
+</div>
+ </div>
+</div>
+</div>
+
+
+
+
+</script>
+</body>
+</html>
